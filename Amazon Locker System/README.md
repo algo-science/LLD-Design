@@ -43,13 +43,30 @@ This ensures maximum utilization of the locker bank.
 ## 🚀 How to Run
 
 ### Prerequisites
-- **Kotlin**: Installed via brew (`brew install kotlin`) or compatible SDK.
+- **Kotlin**: `brew install kotlin`
+- **Java**: JDK 8+
+- **C++**: GCC/Clang with C++17 support
 
 ### Run Demo Driver
-The `AmazonLocker.kt` file includes a `main` function that simulates a full lifecycle:
+
+**Kotlin**:
 ```bash
 kotlinc AmazonLocker.kt -include-runtime -d AmazonLocker.jar
 java -jar AmazonLocker.jar
+```
+
+**Java**:
+```bash
+cd Java
+javac -d . AmazonLocker.java
+java amazon_locker.AmazonLocker
+```
+
+**C++**:
+```bash
+cd Cpp
+g++ -std=c++17 AmazonLocker.cpp -o locker
+./locker
 ```
 
 ### Run Unit Tests
